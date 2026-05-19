@@ -19,7 +19,16 @@ export default function RootLayout({
       <body className={`${inter.className} bg-black text-white min-h-screen pb-16 sm:pb-0`}>
         {children}
         <BottomNav/>
-        <Toaster position="top-center" theme="dark"/>
+        <Toaster 
+  position="top-center" 
+  toastOptions={{
+    style: {
+      background: '#111827', // Gray-900 background matching your UI
+      color: '#fff',
+      border: '1px solid #1f2937', // Gray-800 border
+    },
+  }}
+/>
       </body>
     </html>
   );
